@@ -1,0 +1,30 @@
+{
+  "name": "reward-pump",
+  "version": "1.0.0",
+  "description": "A dividend distribution system for PUMP.FUN token holders",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.ts",
+    "test:unit": "mocha -r ts-node/register tests/unit.ts",
+    "test:integration": "mocha -r ts-node/register tests/integration.ts",
+    "distribute": "ts-node scripts/distribute.ts",
+    "fetch-holders": "ts-node scripts/fetch_holders.ts",
+    "deploy": "ts-node migrations/deploy.ts"
+  },
+  "dependencies": {
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/web3.js": "^1.78.0",
+    "bn.js": "^5.2.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.1",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.5",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
